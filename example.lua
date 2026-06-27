@@ -1,10 +1,6 @@
---[[
-    kiwibirb-ui — Example Script
-    Paste this into your Roblox executor and run.
-]]
-
 -- Load the library
-local Library = loadstring(game:HttpGet("raw.githubusercontent.com/anomalyco/kiwibirb-ui/main/library.lua"))()
+local Library = loadstring(game:HttpGet("raw.githubusercontent.com/justirib/kiwibirb-ui/main/library.lua"))()
+local User = game.Players.LocalPlayer
 
 -- Create the main window
 local Window = Library:Window({
@@ -16,7 +12,7 @@ local Window = Library:Window({
 })
 
 -- Add a watermark
-Library:Watermark("kiwibirb | example", "135215559087473")
+Library:Watermark("kiwibirb | " .. User.Name , "135215559087473")
 
 -- Add the keybind list overlay
 Library:KeybindsList()
